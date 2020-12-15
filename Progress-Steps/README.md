@@ -1,7 +1,7 @@
 # Progress Steps
 
-### A progress bar similar to what you see in ecommerce or surveys.
+### A progress bar similar to what you see in ecommerce or surveys.  
 
-Images are linked from [Unsplash](https://www.unsplash.com). Credits for
-individual photographers can be found by following their respective links in
-``` index.html ```.
+Click "Next" to advance progress bar to next step until reaching the end, when it becomes disabled.  
+
+Click "Prev" to reverse the progress bar until reaching the beginning when it becomes disabled.
