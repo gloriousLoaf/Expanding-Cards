@@ -1,9 +1,8 @@
+/* GLOBAL */
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Lato', sans-serif;
   background-color: #333;
@@ -12,6 +11,16 @@ body {
   margin: 0;
 }
 
+/* UTILITY */
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+
+/* CONTENT */
+/* Containers */
 .container {
   background-color: #fafafa;
   transform-origin: top left;
@@ -20,17 +29,24 @@ body {
   min-height: 100vh;
   padding: 4.12rem;
 }
-
 .container.showNav {
   transform: rotate(-20deg);
 }
-
+/* see Nav section below */
+.container.showNav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+.container.showNav .circle {
+  transform: rotate(-70deg);
+}
 .circleContainer {
   position: fixed;
   top: -100px;
   left: -100px;
 }
 
+/* Circle - nav reveal */
 .circle {
   background-color: #ff7979;
   height: 12.5rem;
@@ -39,7 +55,6 @@ body {
   position: relative;
   transition: transform 0.5s linear;
 }
-
 .circle button {
   cursor: pointer;
   position: absolute;
@@ -51,21 +66,68 @@ body {
   font-size: 1.6rem;
   color: #fff;
 }
-
 .circle button:focus {
   outline: none;
 }
-
 .circle button#open {
   left: 60%;
 }
-
 .circle button#close {
   top: 60%;
   transform: rotate(90deg);
   transform-origin: top left;
 }
 
+/* Nav */
+nav {
+  position: fixed;
+  bottom: 3.25rem;
+  left: 0;
+  z-index: 100;
+}
+nav ul {
+  list-style-type: none;
+  padding-left: 2.5rem;
+}
+nav ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 3rem 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+nav ul li i {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+nav ul li + li {
+  margin-left: 0.8rem;
+  transform: translateX(-150%);
+}
+nav ul li + li + li {
+  margin-left: 1.6rem;
+  transform: translateX(-200%);
+}
+
 .content img {
   max-width: 100%;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.content small {
+  font-style: italic;
+  color: #555;
+}
+
+content p {
+  color: #333;
+  line-height: 1.5;
 }
