@@ -66,8 +66,13 @@ body {
   font-size: 1.6rem;
   color: #fff;
 }
+/* FOCUS - temporary, maybe a bit cheesy, but
+  looks better than the default outline */
 .circle button:focus {
   outline: none;
+}
+.circle button:focus i {
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .circle button#open {
   left: 60%;
