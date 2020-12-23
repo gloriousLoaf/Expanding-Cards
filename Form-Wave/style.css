@@ -1,12 +1,16 @@
 /* GLOBAL */
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
+:root {
+  --primary: #0077b6;
+  --light: #2af5ff;
+}
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #0077b6;
+  background-color: var(--primary);
   color: #fff;
   font-family: 'Muli', sans-serif;
   display: flex;
@@ -28,13 +32,13 @@ body {
 }
 .container a {
   text-decoration: none;
-  color: #2af5ff;
+  color: var(--light);
 }
 .btn {
   cursor: pointer;
   display: inline-block;
   width: 100%;
-  background-color: #2af5ff;
+  background-color: var(--light);
   padding: 1rem;
   font-family: inherit;
   font-size: 1rem;
@@ -68,7 +72,25 @@ body {
   font-size: 1.1rem;
   color: #fff;
 }
+.formControl label {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+}
+/* Effects */
 .formControl input:focus,
 .formControl input:valid {
   outline: 0;
+  border-bottom-color: var(--light);
+}
+.formControl label span {
+  display: inline-block;
+  font-size: 1.1rem;
+  min-width: 0.25rem;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.formControl input:focus + label span,
+.formControl input:valid + label span {
+  color: var(--light);
+  transform: translateY(-2.25rem);
 }
