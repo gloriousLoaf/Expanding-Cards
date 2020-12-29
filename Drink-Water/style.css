@@ -1,0 +1,97 @@
+/* GLOBAL */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600display=swap');
+:root {
+  --border: #144fc6;
+  --fill: #6ab3f8;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #3484e4;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+h1 {
+  margin: 10px 0 0;
+}
+h3 {
+  font-weight: 400;
+  margin: 0.7rem 0;
+}
+
+/* big cup */
+.cup {
+  background-color: #fff;
+  border: 4px solid var(--border);
+  color: var(--border);
+  border-radius: 0 0 2.5rem 2.5rem;
+  height: 20.5rem;
+  width: 9.25rem;
+  margin: 1.8rem 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* small cups div */
+.cup.cupSmall {
+  height: 6rem;
+  width: 3.5rem;
+  border-radius: 0 0 1rem 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-size: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0.3rem;
+  transition: 0.3s ease;
+}
+.cup.cupSmall.full {
+  background-color: var(--fill);
+  color: #fff;
+}
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  width: 18rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* big cup - percentage remained */
+.remained {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s ease;
+}
+.remained span {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.remained small {
+  font-size: 0.75rem;
+}
+.percentage {
+  background-color: var(--fill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  height: 0;
+  transition: 0.3s ease;
+}
+.text {
+  text-align: center;
+  margin: 0 0 0.3rem;
+}
