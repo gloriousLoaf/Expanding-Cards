@@ -2,4 +2,6 @@
 
 ### Search the most popular movies with ratings from API
 ---
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quasi magni, labore magnam mollitia ea eaque dicta nihil quod facilis.
+On loading the applet, the user receives search results for trending movies. The user can then use the search box to look up specific movies or query words related to what they want to view.  
+
+This uses [The Movie Database's API](https://developers.themoviedb.org/3/getting-started/introduction) to pull data. It is free to use for developers, just sign up for an API key. I have hidden mine in an uncommitted JS file, but I did include a dummy version to show how the syntax works.
