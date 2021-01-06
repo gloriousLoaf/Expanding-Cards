@@ -1,0 +1,83 @@
+/* GLOBAL */
+@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
+* {
+  box-sizing: border-box;
+}
+/* primary is for hands & text, secondary is background */
+:root {
+  --primary: #000;
+  --secondary: #fff;
+}
+html {
+  transition: all 0.5s ease-in;
+}
+/* values invert with class .dark for dark mode */
+html.dark {
+  --primary: #fff;
+  --secondary: #333;
+}
+html.dark {
+  background-color: #111;
+  color: var(--primary);
+}
+body {
+  font-family: 'Heebo', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* CLOCK */
+/* container & toggler */
+.toggle {
+  background-color: var(--primary);
+  color: var(--secondary);
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  position: absolute;
+  top: 6.25rem;
+  transition: 0.3s ease-in-out;
+}
+.toggle:focus {
+  outline: 0;
+  transform: scale(0.9);
+}
+.clockContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+/* clock */
+.clock {
+  position: relative;
+  width: 12.5rem;
+  height: 12.5rem;
+  background-color: #f0f0f0;
+}
+.needle {
+  background-color: var(--primary);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  width: 3px;
+  transform-origin: bottom center;
+}
+.needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+.needle.minute {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+}
+.needle.second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+  background-color: #e74c3c;
+}
