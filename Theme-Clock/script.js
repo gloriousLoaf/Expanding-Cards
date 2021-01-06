@@ -79,7 +79,7 @@ const setTime = () => {
     minutes === 0 ? 'none' : 'all 0.5s ease-in'
   }`;
 
-  needleMinute.style.transition = `${
+  needleSecond.style.transition = `${
     seconds === 0 ? 'none' : 'all 0.5s ease-in'
   }`;
 
