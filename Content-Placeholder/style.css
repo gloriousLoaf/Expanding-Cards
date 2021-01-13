@@ -10,10 +10,10 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  /* overflow: hidden; */
   margin: 0;
 }
 
+/* card as it will display content */
 img {
   max-width: 100%;
 }
@@ -43,6 +43,11 @@ img {
   color: #777;
   margin: 10px 0 20px;
 }
+.cardText a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #333;
+}
 .author {
   display: flex;
 }
@@ -62,4 +67,32 @@ img {
 .authorInfo small {
   color: #aaa;
   margin-top: 5px;
+}
+
+/* animation pre-content */
+.animated {
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 10%,
+    #f6f7f8 20%,
+    #f6f7f8 100%
+  );
+  background-size: 200% 100%;
+  animation: bgPosition 1s linear infinite;
+}
+.animatedText {
+  border-radius: 50px;
+  display: inline-block;
+  margin: 0;
+  height: 10px;
+  width: 100%;
+}
+@keyframes bgPosition {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: -150% 0;
+  }
 }
