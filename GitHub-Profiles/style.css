@@ -107,6 +107,17 @@ body {
   margin: 0 0.5rem 0.5rem 0;
   display: inline-block;
 }
+.repo:focus,
+.repo:hover {
+  outline: none;
+  border-bottom: 4px solid var(--grey);
+  margin-bottom: -1px;
+}
+/* on mobile, the last link caused weird distortion */
+.repo:last-child:focus,
+.repo:last-child:hover {
+  margin-bottom: 6px;
+}
 
 @media (max-width: 500px) {
   .card {
