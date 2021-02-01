@@ -19,6 +19,11 @@ body {
 }
 
 /* add notes */
+#newNotes {
+  position: fixed;
+  top: 1.15rem;
+  right: 8rem;
+}
 .add {
   outline: none;
   position: fixed;
