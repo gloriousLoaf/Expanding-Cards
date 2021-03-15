@@ -34,15 +34,26 @@ img {
 .buttonsContainer {
   display: flex;
   justify-content: space-between;
+  background-color: rgba(102, 51, 153, 0.7);
 }
 
 .btn {
-  background-color: rebeccapurple;
+  background-color: #4f1f80;
   color: #fff;
   border: none;
   padding: 0.5rem;
   cursor: pointer;
   width: 49.5%;
+}
+
+.btn#left {
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.btn#right {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .btn:hover,
