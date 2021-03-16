@@ -53,28 +53,24 @@ container.onkeydown = (e) => {
   switch (true) {
     // left: decrement
     case e.keyCode === 37:
-      console.log('left');
       currentSq--;
       currentSq = numReset(e, currentSq);
       document.getElementById(currentSq).focus();
       break;
     // right: increment
     case e.keyCode === 39:
-      console.log('right');
       currentSq++;
       currentSq = numReset(e, currentSq);
       document.getElementById(currentSq).focus();
       break;
     // up: +20
     case e.keyCode === 38:
-      console.log('up');
       currentSq = currentSq - 20;
       currentSq = numReset(e, currentSq);
       document.getElementById(currentSq).focus();
       break;
     // down: -20
     case e.keyCode === 40:
-      console.log('down');
       currentSq = currentSq + 20;
       currentSq = numReset(e, currentSq);
       document.getElementById(currentSq).focus();
@@ -86,6 +82,7 @@ container.onkeydown = (e) => {
  * @desc    Fix currentSq focus for numbers
  *          beyond the scope of grid (0 - 499)
  * @params  event, currently focused square id value
+ * @return  id of next square to focus, adjusted for grid
  */
 const numReset = (e, sq) => {
   switch (true) {
